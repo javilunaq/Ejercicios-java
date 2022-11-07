@@ -30,7 +30,7 @@ public class EjerciciosJava {
         
     }
     
-    public static boolean isCapicua(int number){
+    public static boolean isCapicua(int number){ // palindromo para numeros
         boolean isCapicua = true;
         int remainder;
         int reversed = 0;
@@ -58,7 +58,7 @@ public class EjerciciosJava {
         return factorial;
     }
     
-    public static int mcd(int number1, int number2){
+    public static int mcd(int number1, int number2){  // maximo comun divisor usando el algoritmo de euclides
         int remainder = 0;
         while(number1 % number2 != 0){
             remainder = number1 % number2;
@@ -74,7 +74,7 @@ public class EjerciciosJava {
      * @param number
      * @return
      */
-    public static int cuentaCifras(int number){
+    public static int cuentaCifras(int number){ // funcion que cuenta el numero de cifras de un numero 
         int cociente = 1;
         int counter = 0;
         while(cociente != 0){
@@ -115,7 +115,7 @@ public class EjerciciosJava {
         return reversed;
     }
     
-    public static int cuentaPaquetes(int kilos){
+    public static int cuentaPaquetes(int kilos){   
         int remainder;
         int counter=0;
         if(kilos<0){
@@ -139,8 +139,8 @@ public class EjerciciosJava {
         
     }
     
-    public static int equivalenciaRoman(char leter){
-        switch(leter){
+    public static int equivalenciaRoman(char leter){ // funcion que establece equivalencias entre las letras romanas y su
+        switch(leter){                               // valor numerico decimal
             case 'I':
                 return 1;
             case 'V':
@@ -159,7 +159,7 @@ public class EjerciciosJava {
         }
     }
     
-    public static int romanoDecimal(String roman){
+    public static int romanoDecimal(String roman){  // funcion que pasa de romano a decimal
         int counter = 0;
         int decimal=0;
         boolean hadFinished = false;
@@ -198,7 +198,7 @@ public class EjerciciosJava {
         
     }
     
-    public static int recursivoFibonacci(int n){
+    public static int recursivoFibonacci(int n){  // Fibonacci de manera recursiva
         if (n==1){
             return 0;
         }
@@ -208,7 +208,7 @@ public class EjerciciosJava {
         else return recursivoFibonacci(n-1) + recursivoFibonacci(n-2);
     }
     
-    public static int Fibonacci(int n){
+    public static int Fibonacci(int n){   // Fibonacci de manera no recursiva
         int[] vector = new int[n];
         vector[0] = 1;
         vector[1] = 1;
@@ -251,10 +251,15 @@ public class EjerciciosJava {
         merca.printProducts();
         */
         
-        Laberinto lab = new Laberinto(11,47);
-        lab.readLab();
-        lab.startPosition();
-        lab.runLab();
+        Calculator calc = new Calculator();
+        Sum sum = new Sum();
+        sum.setNum1(5);
+        sum.setNum2(89);
+        
+        calc.setOperation(sum);
+        System.out.println(calc.operate());
+        
+        
         
     }
     
